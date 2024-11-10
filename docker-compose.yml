@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: xrerate/bazel_registry
+    container_name: bazel_registry
+    command: python3 -m http.server 8000
+    ports:
+      - "8000:8000"
